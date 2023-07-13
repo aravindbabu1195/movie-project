@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>details_movie</title>
+</head>
+<body>
+{% extends 'base.html' %}
+
+{% block body %}
+<div class="container">
+
+    <div class="row">
+
+        <div class="col-md-6">
+
+          <div class="home-img" >
+            <img src="{{movie.img.url}} " width="200" height="200" class="img-fluid rounded-circle" alt="">
+          </div>
+
+        </div>
+
+        <div class="col-md-6">
+
+        {{movie.name}}<br>
+        {{movie.desc}}<br>
+        {{movie.year}}<br>
+        <a  class="btn " href="{% url  'movieapp:update' movie.id %}">Update</a><br>
+
+        <a  class="btn" href="{% url  'movieapp:delete' movie.id %}">delete</a>
+        </div>
+
+    </div>
+
+    </div>
+</div>
+{% endblock %}
+
+</body>
+</html>

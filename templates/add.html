@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+ <section class="contact" id="contact">
+        <h2 class="heading">Add <span>Movie's!</span></h2>
+        <form method="post" enctype="multipart/form-data">
+           {% csrf_token %}
+         <div class="input-box">
+             <input type="text" name="name" placeholder="Enter your movie name ">
+            <input type="text" name="desc" placeholder="Enter the description of movie ">
+         </div>
+
+         <div class="input-box">
+           <input type="number" name="year" placeholder="Enter your movie year ">
+            <input type="file" name="img" >
+         </div>
+
+         <input type="submit" class="btn">
+
+        </form>
+    </section>
+
+{% endblock %}

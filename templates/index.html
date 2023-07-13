@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block body %}
+
+
+<div class="skill-container">
+{% for i in movie_list %}
+          <div class="skill-box">
+
+
+               <img class="p-card-img" alt="" src="{{i.img.url}} " width="200" height="200">
+              <div class="skill-layer">
+
+                  <a class="btn" href="{% url  'movieapp:details' i.id %}">{{i.name}}</a>
+
+              </div>
+
+
+          </div>
+   {% endfor %}
+</div>
+
+
+
+{% endblock %}
+
