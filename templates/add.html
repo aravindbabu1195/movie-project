@@ -7,13 +7,13 @@
         <form method="post" enctype="multipart/form-data">
            {% csrf_token %}
          <div class="input-box">
-             <input type="text" name="name" placeholder="Enter your movie name ">
-            <input type="text" name="desc" placeholder="Enter the description of movie ">
+             <input type="text" name="name" placeholder="Enter your movie name " required>
+            <input type="text" name="desc" placeholder="Enter the description of movie " required>
          </div>
 
          <div class="input-box">
-           <input type="number" name="year" placeholder="Enter your movie year ">
-            <input type="file" name="img" >
+           <input type="number" name="year" placeholder="Enter your movie year " required>
+            <input type="file" name="img" required >
          </div>
 
          <input type="submit" class="btn">
